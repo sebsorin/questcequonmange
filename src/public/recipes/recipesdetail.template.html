@@ -1,0 +1,23 @@
+<div id="detail" class="recipes-detail">
+<div class="content">
+<h3 ng-bind="recipe.name"></h3>
+<img ng-src="{{recipe.photoUrl}}">
+<p ng-bind="recipe.descrition"></p>
+<h4>Ingrédients</h4>
+<p> Pour <number-input value="recipe.nbPerson"> </number-input> personnes</p>
+<ul class="ingredients-list">
+	<li ng-repeat="ingredient in recipe.ingredients" class="ingredient">
+		<span class="name">{{ingredient.ingredient}}</span> <span class="quantity">{{ingredient.quantity}} </span> <span class="unit">{{ingredient.unit}}</span>
+	</li>
+</ul>
+<li ng-repeat="step in recipe.steps" class="step">
+		<span class="description"> {{step.description}}</span> 
+		<span class="duration"> {{step.duration}} mn</span> 
+</li>
+</ul>
+</div>
+<div class="footer">
+<a href="#/recettes"> Fermer </a>
+<a ng-click='addToCart()'>Ajouter aux courses</a>
+</div>
+</div>

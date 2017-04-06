@@ -1,0 +1,137 @@
+
+@mixin generate-one-level($class, $level, $max, $content, $colorok, $colornok) {
+    
+    $pseudo: '';
+
+    $okcontent: '';
+    $nokcontent: '';
+
+	@for $i from 1 to $level + 1 {
+        $okcontent: #{$okcontent}#{$content};		
+	}
+
+	@for $i from $level + 1 to $max + 1 {
+        $nokcontent: #{$nokcontent}#{$content};		
+	}
+
+	#{$class}.level-#{$level}::before {
+		content: "#{$okcontent}";
+		color: #{$colorok};
+	}
+
+	#{$class}.level-#{$level}::after {
+		content: "#{$nokcontent}";
+		color: #{$colornok};
+	}
+
+}
+
+@mixin generate-levels($class, $max, $content, $colorok, $colornok) {
+	@for $level from 1 to $max {
+		@include generate-one-level($class, $level, $max, $content, $colorok, $colornok) 
+	}
+}
+
+ 
+* {
+	box-sizing: border-box;
+}
+.recipe-list {
+	@extend .card-panel;
+
+	list-style: none;
+
+	.recipe {
+		display: inline-block;
+		margin: 0.5em;
+	}
+
+	.recipe > div{
+		@extend .card;
+
+		width: 30em;
+
+
+		.photo {
+			@extend .card-image;
+			height: 20em;
+			overflow: hidden;
+		}
+
+		h4 {
+			@extend .card-title;
+			position: absolute;
+			bottom: 1em;
+			padding: 0.5em;
+			z-index:2;
+			color: $text-light-color;
+			margin:0;
+		}
+
+		.difficulty, .rating {
+			box-sizing: all;
+			width: 49%;
+			display: inline-block;
+			color: transparent;
+		}
+
+		@include generate-levels('.difficulty', 5, "\2605", $primary-color, $secondary-color)
+
+		@include generate-levels('.rating', 5, "\2605", $primary-color, $secondary-color)
+
+	}
+}
+
+.recipes-detail {
+	@extend .modal;
+	@extend .modal-fixed-footer;
+	z-index: 100;
+	top: 10%;
+	display: inherit;
+	width: 90%;
+	height: 85%;
+	max-height: 85%;
+
+	.content {
+		@extend .modal-content;
+		img {
+			float: left;
+			margin-right: 10px;
+			width: 55%;
+		}
+
+		.ingredients-list {
+			@extend .collection;
+
+			.ingredient {
+				@extend .collection-item;
+			}
+
+			li .name {
+		    	display: inline-block;
+				width: 50%;
+			}
+
+			li .quantity {
+		    	display: inline-block;
+				width: 20%;
+				text-align: right;
+			}
+
+			li .unit {
+		    	display: inline-block;
+				width: 10%;
+				text-align: right;
+			}
+		}
+	}
+
+	.footer {
+		@extend .modal-footer;
+		a {
+			@extend .btn-flat;
+		}
+	}
+}
+
+

@@ -1,0 +1,24 @@
+<div class="recipes">
+<h3 ng-transclude ng-click='open()'></h3>
+<ul class="recipe-list" ng-hide='closed'>
+   <li class="recipe" ng-repeat='recipe in recipes'>
+      <div ng-click='goto(recipe._id)'>
+      	<h4 class="name">
+      		{{recipe.name}}
+      	</h4>
+      	<div class="photo">
+      	<img ng-src="{{recipe.smallPhotoUrl}}">
+      	</div>
+      	<div class="rating level-{{recipe.rating}}">
+      	{{recipe.rating}}
+      	</div>
+      	<div class="difficulty level-{{recipe.difficulty}}">
+      	{{recipe.difficulty}}	
+      	</div>
+      	<div class="description">
+      		{{recipe.description}}
+      	</div>
+      </div>
+   </li>
+</ul>
+</div>

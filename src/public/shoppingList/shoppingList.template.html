@@ -1,0 +1,8 @@
+<ul class='shopping-list'>
+<li class="header">
+<h4> <span class="name">Article</span> <span class="quantity">quantité</span> <span class="unit">unité</span> <span class="delete"> <button id="delete" ng-click='deleteAll()'>Effacer</button> </span> </h4> 
+</li>
+<li class='ingredient' ng-repeat='ingredient in ingredients' >
+	<input type="checkbox" id="ingredient_{{$index}}" ng-click='check(ingredient)' ng-checked="ingredient.checked"/> <label for="ingredient_{{$index}}" > <span class="name">{{ingredient.ingredient}}</span><span class="quantity">{{ingredient.quantity}}</span><span class="unit">{{ingredient.unit}}</span> </label>
+</li>
+</ul>

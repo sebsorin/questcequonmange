@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Administration Qu'est qu'on mange</title>
+
+   <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- bower:css -->
+  <!-- endinject -->
+	 <!-- inject:css -->
+  <!-- endinject -->
+</head>
+<body ng-app="questcequonmangeadmin">
+
+ <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Qu'est ce que qu'on mange</a>
+      <span> admin </span>
+ 
+      <a data-activates="main-menu" class="menu-button"></a>
+ 
+      <ul id="main-menu" class="menu">
+        <li><a href="/#recettes">Recettes</a></li>
+      </ul>
+
+      
+    </div>
+  </nav>
+
+<div ui-view></div>
+  <!-- bower:js -->
+  <!-- endinject -->
+  <!-- inject:js -->
+  <!-- endinject -->
+
+  <!-- ext-js:js -->
+  <!-- endinject -->
+
+<script type="text/javascript">
+  
+   $('.menu-button').sideNav();
+        
+</script>
+</body>
+</html>

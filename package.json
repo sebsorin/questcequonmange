@@ -1,0 +1,39 @@
+{
+  "name": "questcequonmange",
+  "version": "0.0.1",
+  "description": "site for qu est ce qu on mange",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test",
+    "start": "node src/app/index.js",
+    "debug": "node-debug src/app/index.js"
+  },
+  "author": "sebastien sorin",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^1.5.2",
+    "bluebird": "^3.4.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.13.4",
+    "fs-promise": "^0.5.0",
+    "materialize-css": "^0.97.6",
+    "mongo": "^0.1.0",
+    "mongoose": "^4.4.17",
+    "multer": "^1.3.0",
+    "sharp": "^0.17.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.12.8",
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-batch": "^1.0.5",
+    "gulp-inject": "^4.0.0",
+    "gulp-run-sequence": "^0.3.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-watch": "^4.3.5",
+    "main-bower-files": "^2.13.0",
+    "node-rest-client": "^2.0.1",
+    "sass": "^0.5.0",
+    "tree-kill": "^1.1.0"
+  }
+}

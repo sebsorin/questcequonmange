@@ -1,0 +1,113 @@
+[ {
+
+	"name": "Crêpes",
+	"type": "dessert", 
+	"descrition": "Une spécialitée bretonne",
+	"photo": "crepes.jpg",
+	"smallPhoto": "s_crepe.jpeg",
+    "rating": 4,
+    "nbPerson": 4,
+    "difficulty": 1,
+    "steps" : [ 
+    ],
+    "ingredients" : [
+    	{
+    		"ingredient": "oeufs",
+    		"quantity": 1,
+            "unit": "piece"
+    	},
+    	{
+    		"ingredient": "farine",
+    		"quantity": 250,
+            "unit": "g"
+    	},
+    	{
+    		"ingredient": "lait",
+    		"quantity": 50,
+            "unit": "cl"
+    	}
+    ]
+},
+{
+
+    "name": "Queques portugues",
+    "type": "dessert", 
+    "descrition": "Un dessert portugais",
+    "photo": "gac.JPG",
+    "smallPhoto": "s_gac.JPG",
+    "rating": 3,
+    "nbPerson": 4,
+    "difficulty": 1,
+    "steps" : [ 
+    ],
+    "ingredients" : [
+        {
+            "ingredient": "farine",
+            "quantity": 100,
+            "unit": "g"
+        },
+        {
+            "ingredient": "sucre",
+            "quantity": 50,
+            "unit": "g"
+        },
+        {
+            "ingredient": "huile",
+            "quantity": 10,
+            "unit": "cl"
+        }
+    ]
+},
+{
+
+    "name": "Poulet basquaise",
+    "type": "plat", 
+    "descrition": "Une recette du pays basque",
+    "photo": "pbasq.jpg",
+    "smallPhoto": "s_pbasq.jpeg",
+    "rating": 3,
+    "nbPerson": 4,
+    "difficulty": 3,
+    "steps" : [ 
+    ],
+    "ingredients" : [
+        {
+            "ingredient": "poulet",
+            "quantity": 1,
+            "unit": "piece"
+        },
+        {
+            "ingredient": "poivrons",
+            "quantity": 5,
+            "unit": "piece"
+        }
+    ]
+},{
+    "name": "Carottes rapées",
+    "type": "entree", 
+    "descrition": "Classique mais succulent",
+    "photo": "Carotte-rapees.jpg",
+    "smallPhoto": "s_crap.jpeg",
+    "rating": 5,
+    "nbPerson": 4,
+    "difficulty": 1,
+    "steps" : [ 
+    ],
+    "ingredients" : [
+        {
+            "ingredient": "carottes",
+            "quantity": 6,
+            "unit": "piece"
+        },
+        {
+            "ingredient": "huile",
+            "quantity": 20,
+            "unit": "cl"
+        },
+        {
+            "ingredient": "vinaigre",
+            "quantity": 10,
+            "unit": "cl"
+        }
+    ]
+}]

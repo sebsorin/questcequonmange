@@ -1,0 +1,77 @@
+
+
+.shopping-list {
+	@extend .collection;
+    @extend .with-header;
+    min-width: 500px;
+
+
+    .header {
+    	@extend .collection-header;
+
+    	h4 {
+    	  padding-left: 45px;
+    	  margin: 0;
+    	}
+
+ 
+    	#delete {
+
+    		&:before {
+        		@extend .material-icons;
+        		content: 'delete';
+    		}
+			@extend .btn;
+			@extend .waves-effect;
+			@extend .waves-light;
+			display: inline-block; 
+			font-size: 0;
+			line-height: 0;
+			width: 36px; 
+			padding: 0;		
+    	}
+    }
+    li label {
+        display: block;
+    	width:100%;
+    }
+    li .name {
+		    display: inline-block;
+			width: 50%;
+	}
+
+	li .quantity {
+		    display: inline-block;
+			width: 20%;
+			text-align: right;
+	}
+
+	li .unit {
+		    display: inline-block;
+			width: 10%;
+			text-align: right;
+	}
+
+	li .delete {
+		    display: inline-block;
+			width: 10%;
+			text-align: right;
+	}
+
+	.ingredient {
+		@extend .collection-item;
+		input[type="checkbox"] {
+			@extend [type="checkbox"].filled-in;
+			+ label {
+				display: inline-block;
+			}
+		}
+
+	}
+
+}
+
+
+[type="checkbox"]:not(.filled-in) + label::after {
+	transform:scale(1);
+}

@@ -1,0 +1,32 @@
+<div id="detail" class="recipes-detail edit">
+<div class="content">
+<h3 ng-bind="recipe.name"></h3>
+<img ng-src="{{recipePhotoUrl}}">
+<input type="file" photo-upload name="photo">
+<input type="text" ng-model="recipe.descrition"></span>
+<h4>Ingrédients</h4>
+<p> Pour <number-input value="recipe.nbPerson"> </number-input> personnes</p>
+<ul class="ingredients-list">
+	<li ng-repeat="ingredient in recipe.ingredients" class="ingredient">
+		<span class="name"> <input type="text" ng-model="ingredient.ingredient"></span> 
+		<span class="quantity"> <input type="text" ng-model="ingredient.quantity"></span> 
+		<span class="unit"><input type="text" ng-model="ingredient.unit"></span> 
+		<button ng-click="removeIngredient(index)"> supprimer </button>
+	</li>
+	<li> <button ng-click="addIngredient()"> ajouter </button> </li>
+</ul>
+<ul class="steps">
+<li ng-repeat="step in recipe.steps" class="step">
+		<span class="description"> <input type="text" ng-model="step.description"></span> 
+		<span class="duration"> <input type="text" ng-model="step.duration"> mn</span> 
+		<button ng-click="removeStep(index)"> supprimer </button>
+	</li>
+	<li> <button ng-click="addStep()"> ajouter </button> </li>
+</ul>
+
+</div>
+<div class="footer">
+<a class ='close' href="#/recettes"> Fermer </a>
+<a class='save' ng-click='update()'> Sauver </a>
+</div>
+</div>

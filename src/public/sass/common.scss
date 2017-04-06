@@ -1,0 +1,94 @@
+@import "../../../node_modules/materialize-css/sass/materialize";
+
+$text-light-color: white;
+
+@font-face {
+    font-family: 'PecitaBook';
+        src: url('/public/fonts/PecitaBook.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+      }
+
+.brand-logo {
+	font-family: 'PecitaBook'; 
+}
+
+.material-icons {
+    direction: ltr;
+    display: inline-block;
+    font-family: 'Material Icons';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-height: 1;
+    text-transform: none;
+    white-space: nowrap;
+    word-wrap: normal;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.menu-button {
+	@extend .button-collapse;
+	&:before {
+        @extend .material-icons;
+		@extend .large;
+   		content: 'menu';
+   	}
+	width: 64px;
+}
+
+@media #{$large-and-up} {
+
+    .menu::before {display: none;}
+    .menu { 
+      float: right; 
+      position: relative;
+ 	  background-color: transparent;
+ 	  box-shadow: 0;
+ 	  width: auto;
+ 	  padding-bottom: 0;
+ 	  color: $navbar-font-color;
+ 	  transform: translateX(0px) !important;
+ 	  overflow: hidden; 
+      li {
+      	float:left;
+
+      }
+      a {
+ 	  	color: $navbar-font-color;
+      }
+    }
+
+}
+
+
+.menu {
+	@extend .side-nav;
+	// transform: translateX(0px);
+	overflow: visible; 
+}
+
+
+.number-input {
+    display: inline;
+	button {
+		@extend .material-icons, .btn-floating, .waves-effect, .waves-light;
+
+	}
+	input {
+		display: inline;
+		width: 50px;
+		margin-left: 10px;
+		margin-right:10px;
+	}
+}
+
+
+h3, h4 {
+	color: $secondary-color;
+}
+
+@import "recipe";
+@import "shoppingList";
