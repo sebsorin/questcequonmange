@@ -1,4 +1,4 @@
-- Questquonmange
+# Questquonmange
 
 
 This is a sketch that I have written for a friend to showcase to him how is website would look like. He is about to open a cook course business and wanted his customers to have access to the recipes they learned and be able to create automatically a shopping list.
